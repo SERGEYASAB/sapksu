@@ -1,0 +1,19 @@
+var a;
+var b;
+
+a = 70;
+b = 90;
+a = b + b + b;
+a = a + b;
+
+if (R0A15_DO4.value == true)
+{
+  R1A28_AO1.value = 50;
+}
+
+R0A15_DO5.value = true;
+
+for (var d = 0; d < 10; d++) {
+  R1A28_AO1.value = R1A28_AO1.value + 1
+  var c = d;
+}

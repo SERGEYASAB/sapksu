@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EnergoFormDeviceWidget</class>
+ <widget class="QWidget" name="EnergoFormDeviceWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>662</width>
+    <height>208</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>863</width>
+    <height>208</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="mainLayout">
+   <item>
+    <layout class="QHBoxLayout" name="topButtonsLayout">
+     <item>
+      <widget class="QPushButton" name="startGenerationButton">
+       <property name="text">
+        <string>Запустить генерацию сигнала</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="stopGenerationButton">
+       <property name="text">
+        <string>Остановить генерацию сигнала</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="frequencyLayout">
+       <item>
+        <widget class="QLabel" name="labelFrequency">
+         <property name="text">
+          <string>Частота, Гц</string>
+         </property>
+         <property name="buddy">
+          <cstring>lineEditFrequency</cstring>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEditFrequency"/>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="phaseSettingsLayout">
+     <item>
+      <widget class="QGroupBox" name="groupBoxA">
+       <property name="title">
+        <string>A</string>
+       </property>
+       <layout class="QFormLayout" name="phaseALayout">
+        <item row="0" column="0">
+         <widget class="QLabel" name="labelUa">
+          <property name="text">
+           <string>Ua, В</string>
+          </property>
+          <property name="buddy">
+           <cstring>lineEditUa</cstring>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="lineEditUa"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="labelIa">
+          <property name="text">
+           <string>Ia, В</string>
+          </property>
+          <property name="buddy">
+           <cstring>lineEditIa</cstring>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="lineEditIa"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="labelAngleUab">
+          <property name="text">
+           <string>∠Uab</string>
+          </property>
+          <property name="buddy">
+           <cstring>lineEditAngleUab</cstring>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="lineEditAngleUab"/>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="labelAngleUIa">
+          <property name="text">
+           <string>∠UIa</string>
+          </property>
+          <property name="buddy">
+           <cstring>lineEditAngleUIa</cstring>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLineEdit" name="lineEditAngleUIa"/>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="labelCosUIa">
+          <property name="text">
+           <string>cosΦ</string>
+          </property>
+          <property name="buddy">
+           <cstring>lineEditCosUIa</cstring>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QLineEdit" name="lineEditCosUIa">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="palette">
+           <palette>
+            <active>
+             <colorrole role="Base">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>240</red>
+                <green>240</green>
+                <blue>240</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </active>
+            <inactive>
+             <colorrole role="Base">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </inactive>
+            <disabled>
+             <colorrole role="Base">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>240</red>
+                <green>240</green>
+                <blue>240</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </disabled>
+           </palette>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="groupBoxB">
+       <property name="title">
+        <string>B</string>
+       </property>
+       <layout class="QFormLayout" name="phaseBLayout">
+        <item row="0" column="0">
+         <widget class="QLabel" name="labelUb">
+          <property name="text">
+           <string>Ub, В</string>
+          </property>
+          <property name="buddy">
+           <cstring>lineEditUb</cstring>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="lineEditUb"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="labelIb">
+          <property name="text">
+           <string>Ib, В</string>
+          </property>
+          <property name="buddy">
+           <cstring>lineEditIb</cstring>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="lineEditIb"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="labelAngleUbc">
+          <property name="text">
+           <string>∠Ubc</string>
+          </property>
+          <property name="buddy">
+           <cstring>lineEditAngleUbc</cstring>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="lineEditAngleUbc">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="palette">
+           <palette>
+            <active>
+             <colorrole role="Base">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>240</red>
+                <green>240</green>
+                <blue>240</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </active>
+            <inactive>
+             <colorrole role="Base">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </inactive>
+            <disabled>
+             <colorrole role="Base">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>240</red>
+                <green>240</green>
+                <blue>240</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </disabled>
+           </palette>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+          <property name="clearButtonEnabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="labelAngleUIb">
+          <property name="text">
+           <string>∠UIb</string>
+          </property>
+          <property name="buddy">
+           <cstring>lineEditAngleUIb</cstring>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLineEdit" name="lineEditAngleUIb">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="labelCosUIb">
+          <property name="text">
+           <string>cosΦ</string>
+          </property>
+          <property name="buddy">
+           <cstring>lineEditCosUIb</cstring>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QLineEdit" name="lineEditCosUIb">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="palette">
+           <palette>
+            <active>
+             <colorrole role="Base">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>240</red>
+                <green>240</green>
+                <blue>240</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </active>
+            <inactive>
+             <colorrole role="Base">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </inactive>
+            <disabled>
+             <colorrole role="Base">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>240</red>
+                <green>240</green>
+                <blue>240</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </disabled>
+           </palette>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="groupBoxC">
+       <property name="title">
+        <string>C</string>
+       </property>
+       <layout class="QFormLayout" name="phaseCLayout">
+        <item row="0" column="0">
+         <widget class="QLabel" name="labelUc">
+          <property name="text">
+           <string>Uc, В</string>
+          </property>
+          <property name="buddy">
+           <cstring>lineEditUc</cstring>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="lineEditUc"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="labelIc">
+          <property name="text">
+           <string>Ic, В</string>
+          </property>
+          <property name="buddy">
+           <cstring>lineEditIc</cstring>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="lineEditIc"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="labelAngleUca">
+          <property name="text">
+           <string>∠Uca</string>
+          </property>
+          <property name="buddy">
+           <cstring>lineEditAngleUca</cstring>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="lineEditAngleUca"/>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="labelAngleUIc">
+          <property name="text">
+           <string>∠UIc</string>
+          </property>
+          <property name="buddy">
+           <cstring>lineEditAngleUIc</cstring>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLineEdit" name="lineEditAngleUIc"/>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="labelCosUIc">
+          <property name="text">
+           <string>cosΦ</string>
+          </property>
+          <property name="buddy">
+           <cstring>lineEditCosUIc</cstring>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QLineEdit" name="lineEditCosUIc">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="palette">
+           <palette>
+            <active>
+             <colorrole role="Base">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>240</red>
+                <green>240</green>
+                <blue>240</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </active>
+            <inactive>
+             <colorrole role="Base">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </inactive>
+            <disabled>
+             <colorrole role="Base">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>240</red>
+                <green>240</green>
+                <blue>240</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </disabled>
+           </palette>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>lineEditFrequency</tabstop>
+  <tabstop>lineEditUa</tabstop>
+  <tabstop>lineEditUb</tabstop>
+  <tabstop>lineEditUc</tabstop>
+  <tabstop>lineEditIa</tabstop>
+  <tabstop>lineEditIb</tabstop>
+  <tabstop>lineEditIc</tabstop>
+  <tabstop>lineEditAngleUab</tabstop>
+  <tabstop>lineEditAngleUbc</tabstop>
+  <tabstop>lineEditAngleUca</tabstop>
+  <tabstop>lineEditAngleUIa</tabstop>
+  <tabstop>lineEditAngleUIb</tabstop>
+  <tabstop>lineEditAngleUIc</tabstop>
+  <tabstop>lineEditCosUIa</tabstop>
+  <tabstop>lineEditCosUIb</tabstop>
+  <tabstop>lineEditCosUIc</tabstop>
+  <tabstop>startGenerationButton</tabstop>
+  <tabstop>stopGenerationButton</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+ <designerdata>
+  <property name="gridDeltaX">
+   <number>10</number>
+  </property>
+  <property name="gridDeltaY">
+   <number>10</number>
+  </property>
+  <property name="gridSnapX">
+   <bool>true</bool>
+  </property>
+  <property name="gridSnapY">
+   <bool>true</bool>
+  </property>
+  <property name="gridVisible">
+   <bool>true</bool>
+  </property>
+ </designerdata>
+</ui>

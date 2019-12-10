@@ -1,0 +1,15 @@
+﻿<?xml version="1.0"?>
+<Config>
+<MainWindow ConnectButtonShortcut = "Ctrl+W" CalculatorShortcut="Ctrl+Q" ChangeConnectionShortcut="Ctrl+E" SaveLogShortcut="Ctrl+R">
+
+<ModbusRequestWidget Name = "Modbus запрос" SendButtonShortcut = "Ctrl+D" TestTimeout="3000" TestRequestsCount="10">
+</ModbusRequestWidget>
+
+<ModbusRequestWidget Name = "Modbus запрос" SendButtonShortcut = "Ctrl+D" TestTimeout="3000" TestRequestsCount="10">
+</ModbusRequestWidget>
+
+<RandomRequestWidget Name = "Произвольный запрос" SendButtonShortcut = "Ctrl+G">
+</RandomRequestWidget>
+
+</MainWindow>
+</Config>

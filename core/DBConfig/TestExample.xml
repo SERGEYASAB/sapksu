@@ -1,0 +1,18 @@
+<Test>
+    <Variables>
+        <InternalVariables>
+            <InternalVariable Name="local1" Description=""/>
+        </InternalVariables>
+        <ExternalVariables>
+            <ExternalVariable Alias="alias1"/>
+            <ExternalVariable Alias="alias3"/>
+        </ExternalVariables>
+    </Variables>
+    <Steps>
+        <Begin Name="Инициализания">//Шаг инициализации</Begin>
+        <Step Name="Новый шаг">//Редактирование алгоритмов</Step>
+        <Step Name="Новый шаг">//Редактирование алгоритмов</Step>
+        <Step Name="Новый шаг">//Редактирование алгоритмов</Step>
+        <End Name="Деинициализация">//Шаг деинициализации</End>
+    </Steps>
+</Test>
